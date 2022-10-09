@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css" type="text/css"/>
+    <title>Thoroughbred Ownership Consultancy</title>
+    <style>
+        
+        h1{
+       font-size: 3em; 
+       margin-top: .5em;    
+        }
+        .banner{
+            max-width: 100%;
+        }
+        .logoimage{
+            max-width: 100%;
+        }
+
+        .sub-title {
+
+        
+            background-color: rgb(173, 56, 56);
+            font-size: 1.5em;
+            padding: 10px;
+            border-color:black;
+                       
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Whatwedo.html">What We Do</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  </header>
+  <main>
+    <aside><img class="logoimage" alt="Thoroughbred Ownership Consulting"/></aside>
+    
+    <article>
+        <section class="columns-desktop">
+            <div class = "pie">
+                <img src="images/bridle.jpg " alt="Race Track package"/>
+                <div class="columns">
+                <div class ="title">Race Track package</div>  
+                <div class="price" > 1-3 horses $60.00 per month</div>
+                <div class="price" > 4-6 horses $90.00 per month</div>
+                <div class="Price">7-10 horses $120 per month</div>
+            
+            <p class="desc">Racetrack Package</p>
+            <button data-order="Racetrack">Order 1-3 horses</button>
+            <button data-order="Racetrack">Order 4-6 horses</button>
+            <button data-order="Racetrack">Order 7-10 horses</button>
+            </div>
+            <div class ="pie">
+                <img src="images/saddle.jpg" alt="Farm Package"/>
+                <div class="columns">
+                <div class ="title">Farm package - Mares & foals</div>  
+              
+                <div class="price" > 1-3 Mares with foals at side $80.00 per month</div>
+                <div class="price" > 4-6 Mares with foals at side $120.00 per month</div>
+                <div class="Price">7-10 Mares with foals at side $140 per month</div>
+                
+                <p class="desc">Farm Package</p>
+                <button data-order="Racetrack">Order 1-3 mares w/foals</button>
+                <button data-order="Racetrack">Order 4-6 mares w/foals</button>
+                <button data-order="Racetrack">Order 7-10 mares w/foals</button>
+                </div>
+                
+            </div>
+            <img src="images/farmtrack.jpg" alt="Yearlings"/>
+                <p class="desc">Yearlings package</p>
+                <div class="price" > 1-3 Yearlings $80.00 per month</div>
+                <div class="price" > 4-6 Yearlings $120.00 per month</div>
+                <div class="Price">7-10 Yearlings $140 per month</div>
+                
+                <p class="desc">Yearling Package</p>
+                <button data-order="Yearling">Order 1-3 yearlings</button>
+                <button data-order="Yearling">Order 4-6 yearlings</button>
+                <button data-order="Yearling">Order 7-10 yearlings</button>
+                </div>
+                
+           
+            </div>
+            </section>
+            
+    
+    </article>
+  </main>
+  <footer>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="Whatweoffer.html"></a></li>
+            <li><a href="contact.html">C</a></li>
+        </ul>
+    </nav>
+  </footer>
+</body>
+<script>
+    window.addEventListener("DOMContentLoaded", function(e) {
+        const orderButtons= document.querySelectorAll("button[data-order]");
+        
+        orderButtons.forEach(function(button) { 
+
+        button.addEventListener("click", function(e) { 
+            const button = e.currentTarget;
+                        const container = button.parentNode;
+
+            const order ={
+                id: button.getAttribute("data-order"),
+                title: container.querySelector(".title").innerText,
+                price: container.querySelector(".price").innerText,
+                desc: container.querySelector(".desc").innerText
+            };
+            localStorage.setItem("order", JSON.stringify (order));
+
+            const url = window.location.href.replace("whatwedo.html", "order.html");
+            window.location.href = url;
+
+
+    });
+});
+});
+    </script>
+
+</html>

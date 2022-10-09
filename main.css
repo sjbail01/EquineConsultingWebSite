@@ -1,0 +1,148 @@
+* {
+margin:0; 
+} 
+html, 
+body{
+ height:100%
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #461d86;}
+    
+    
+p {
+    margin: .5em 0 .5em 0;
+}
+header{
+    display: block;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    background-color: #461d86;
+    padding: 10px;
+    box-shadow:0px 3px 15px;
+}
+#menuid{
+    margin: 10px 10px 10px 0px;
+    font-size: large;
+}
+.logoimage{
+    width: 250px;
+    border: 20px;
+    border-color: black;
+    border-radius: 50%;
+    box-shadow: 
+    10px 10px 10px black,
+    5px 5px 5px black,
+    5px 5px 5px black;
+}
+
+ 
+.banner {
+    
+    border-radius:2%;
+    box-shadow: 
+    10px 10px 10px black,
+    5px 5px 5px black,
+    5px 5px 5px black;
+    margin: 10px;
+    border-radius: 2%;
+    
+   
+}
+
+ nav a:visited,
+ nav a:link{
+    color: #fff;
+    text-decoration: none;
+ }
+ nav > ul {
+    display: inline;
+    padding: 0;
+ }
+ nav > ul > li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 5px 0 5px;
+ }
+
+ nav > ul > li> a:hover{
+    color:#0c041a;
+    background: white;
+    font-weight: 18;
+    transition-duration: 3s;
+    transition-timing-function:steps (4,end);  
+ }
+ main{
+    display: block;
+    background: url("images/background.png");
+    padding-top:3em;
+    padding-bottom: 3em;
+    min-height: 85%;
+    display: center;
+    margin-top: 20px;
+ }
+ footer{
+    padding: 15px;
+     }
+     aside,
+     article {
+        text-align: center;
+        padding: 2em;
+     }
+     aside {
+        text-align: center;
+     }
+     article {
+        width: 75%;
+     }
+     .columns{
+        display: flex;
+
+     }
+     @media only screen and (min-width:768px) {
+        main {
+            display: flex;
+        }
+       
+          aside {
+        margin-left: 2%;
+     }
+    .columns-desktop {
+        display: flex;
+    }
+    }
+    /*Pies*/
+    .pie {
+        width: 200px;
+        padding: 10px;
+        margin: 10px;  
+        background-color: #fff;
+        border: solid 1px #ccc;
+        box-shadow: 5px 5px 15px 15px;
+        transition-duration: 0.75s;
+    }
+    .pie img{
+        width: 100%;
+            }
+    .pie .title{
+        font-weight: bold;
+    }
+    .pie .columns{
+        width: 100%;
+        }
+        .pie .price{
+            text-align: right;
+        }
+        .pie .columns div{
+            width: 50%;
+        }
+        .pie button{
+            background-color: #461d86;
+            padding: 10px;
+            border: solid 1px black;
+            border-radius: 3px;
+            color:#fff
+            fle
+        }
