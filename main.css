@@ -5,6 +5,7 @@ html,
 body{
  height:100%
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #461d86;}
@@ -15,13 +16,42 @@ p {
 }
 header{
     display: block;
-    position: fixed;
+    position: fixed;    
     top:0;
     left: 0;
     width: 100%;
     background-color: #461d86;
     padding: 10px;
     box-shadow:0px 3px 15px;
+}
+h1 {
+    text-shadow: 1px 2px 2px  rgb(173, 56, 56);
+}
+
+.sub-title {
+    
+    background-color: rgb(173, 56, 56);
+    font-size: 1.5em;
+    padding: 10px;
+    border-color:black;
+    border-width: 1px 4px 12px;        
+    }
+    
+  .images{
+    background-image: (farmtrack.jpg),(saddle.jpg)
+  background-position: top left, top right;
+  background-repeat: no repeat, no repeat;
+  }
+
+.tbprice  th{
+  
+background-color: #ccc;
+}
+.tbprice td{
+    background-color: bisque;
+}
+.tbprice{
+    margin-top: 30px;
 }
 #menuid{
     margin: 10px 10px 10px 0px;
@@ -95,6 +125,7 @@ header{
         text-align: center;
      }
      article {
+        text-align: center;
         width: 75%;
      }
      .columns{
@@ -113,8 +144,8 @@ header{
         display: flex;
     }
     }
-    /*Pies*/
-    .pie {
+    /*oboxs*/
+    .obox {
         width: 200px;
         padding: 10px;
         margin: 10px;  
@@ -123,22 +154,22 @@ header{
         box-shadow: 5px 5px 15px 15px;
         transition-duration: 0.75s;
     }
-    .pie img{
+    .obox img{
         width: 100%;
             }
-    .pie .title{
+    .obox .title{
         font-weight: bold;
     }
-    .pie .columns{
+    .obox .columns{
         width: 100%;
         }
-        .pie .price{
+        .obox .price{
             text-align: right;
         }
-        .pie .columns div{
+        .obox .columns div{
             width: 50%;
         }
-        .pie button{
+        .obox button{
             background-color: #461d86;
             padding: 10px;
             border: solid 1px black;
