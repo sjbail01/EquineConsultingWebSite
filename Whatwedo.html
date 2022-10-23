@@ -41,17 +41,18 @@
     
     <article>
         <section class="columns-desktop">
-            <div class = "obox">
-                
+            <div class="obox">
+<!--                
                 <img src="images/farmtrack.jpg " alt="Billing package"/>
                 <img src="images/saddle.jpg " alt="Billing package"/>
+-->             
             </div>
             <article>
                 <h1>How We Can Help!</h1>
                 <p class="sub-title">
                         We offer 3 packages. Billing, Farm Visit and Track visit. Each visit will include photographs(excludes invoices) 
                         and a written report. The report will include environmental conditions where applicable , any inconsitencies, general 
-                        well being and any observations based on 35 years of experience.
+                        well being and any observations based on 35 years of industy experience in training, breaking, accounting and veterinary medicine.
                                                 
                     </p>
 
@@ -123,11 +124,15 @@
   </main>
   <footer>
     <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="Whatweoffer.html"></a></li>
-            <li><a href="contact.html">C</a></li>
-        </ul>
+      
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="Whatwedo.html">What we do</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul> 
+        </nav>
+        Copyright Sarah Bailey 2022
+       
     </nav>
   </footer>
 </body>
@@ -142,7 +147,15 @@
             const button = e.currentTarget;
                         const container = button.parentNode;
                       
+
+ let logoimage=  document.getElementsByClassName('logoimage')[0];
+  logoimage.classList.add("load");
+
+
 let myval=e.currentTarget.attributes['data-order'].value;
+
+
+
            const order ={
                 id: button.getAttribute("data-order"),
                 title: document.getElementsByClassName("title"+myval)[0].innerText,

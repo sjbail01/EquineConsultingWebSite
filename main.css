@@ -4,11 +4,15 @@ margin:0;
 html, 
 body{
  height:100%
+ 
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #461d86;}
+    background-color: #461d86;
+    border: 3xp dotted black
+    
+}
     
     
 p {
@@ -33,22 +37,27 @@ h1 {
     background-color: rgb(173, 56, 56);
     font-size: 1.5em;
     padding: 10px;
-    border-color:black;
-    border-width: 1px 4px 12px;        
+    border-color:3px  dotted black;
+    border-width: 1px 4px 12px;  
+          
     }
     
   .images{
-    background-image: (farmtrack.jpg),(saddle.jpg)
+   background-image: (farmtrack.jpg),(saddle.jpg);
   background-position: top left, top right;
   background-repeat: no repeat, no repeat;
   }
 
+
 .tbprice  th{
-  
-background-color: #ccc;
+
+  width: 100%;
+  height: 50px;
+background-color:  #54328b;
+
 }
 .tbprice td{
-    background-color: bisque;
+    background-color: rgb(201, 81, 81);
 }
 .tbprice{
     margin-top: 30px;
@@ -59,16 +68,29 @@ background-color: #ccc;
 }
 .logoimage{
     width: 250px;
-    border: 20px;
+     border: 20px;
     border-color: black;
     border-radius: 50%;
-    box-shadow: 
-    10px 10px 10px black,
+    box-shadow: 10px 10px 10px black,
     5px 5px 5px black,
     5px 5px 5px black;
+    transition: transform 1s;
+}
+/*this is for logo to load and spin on order button for slow loading page */
+.load{
+transform:translate(500px, 100px)  rotate(360deg);
+animation: 3s spin 1s infinite;
+
 }
 
- 
+@keyframes spin{
+    from{
+        transform: translate (500px, 100px) rotate(0deg);
+    }
+    to{
+        transform: translate (500px, 100px) rotate(360deg);
+}
+}
 .banner {
     
     border-radius:2%;
@@ -115,6 +137,10 @@ background-color: #ccc;
  }
  footer{
     padding: 15px;
+    display: flex;
+   align-items: center;
+   justify-content: space-between;
+ 
      }
      aside,
      article {
@@ -135,7 +161,12 @@ background-color: #ccc;
      @media only screen and (min-width:768px) {
         main {
             display: flex;
-        }
+                    }
+                }
+    /*this is to hide my logo and images when in mobile*/
+    @media (max-width:768px) {
+         .logoimage ,.hideclass { 
+            display: none;  }         
        
           aside {
         margin-left: 2%;
@@ -149,10 +180,12 @@ background-color: #ccc;
         width: 200px;
         padding: 10px;
         margin: 10px;  
-        background-color: #fff;
-        border: solid 1px #ccc;
+        background-color:white;
+        border: solid 1px brgb(204, 204, 204);
         box-shadow: 5px 5px 15px 15px;
         transition-duration: 0.75s;
+        height: 200px;
+        background-image:url("images/farmtrack.jpg") top left no-repeat, url("images/saddle.jpg") center right no repeat ;
     }
     .obox img{
         width: 100%;
@@ -174,6 +207,6 @@ background-color: #ccc;
             padding: 10px;
             border: solid 1px black;
             border-radius: 3px;
-            color:#fff
-            fle
+            color:#fff;
+            
         }
