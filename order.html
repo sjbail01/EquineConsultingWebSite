@@ -16,7 +16,8 @@
 
 
         .input-group {
-            margin-bottom: 20px;       
+            margin-bottom: 20px;  
+            color: #fff;     
         }
         .input-group input,
         .input-group textarea,
@@ -25,6 +26,7 @@
             border: 1px soldid;
             border-radius: 2px;
             width: 100%;  
+            
          }
          label{
             font-weight: 600;
@@ -34,11 +36,16 @@
             border: 0;
             text-decoration: underline;
             cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            color: #fff;
+
                 }
         input[type="sumit"] {
             border: solid 1px #999;
             border-radius: 3px;
             padding: 10px;
+           
         }
     </style>
    
@@ -82,9 +89,24 @@
                 <div><input type="text" name="last-name" id="last name" /></div>
             </div>
 
+
+            <div class="input-group">
+                <div><label for="Phone"> Phone</label></div>
+                <input id="phone" name="phone" type="tel"
+                pattern="^(\(?0[1-9]{1}\)?)?[0-9 -]*$"
+                aria-describedby="phone-desc">
+            <p id="phone-desc">For example, (502) 234 1234</p>
+               
+            </div>
+
+            <div class="input-group">
+                <div><label for= "e-mail"> Email</label></div>
+                <div><input type="text" name="email" id="email" /></div>
+            </div>
+
             <div class="input-group">
                 <div><label for= "address"> Address</label></div>
-                <div><input type="address" name="address" id="first name" /></div>
+                <div><input type="text" name="address" id="address" /></div>
             </div>
 
             <div class="input-group">
