@@ -13,10 +13,15 @@ body {
    
     
 }
-    
+ a {
+    color: #fff;
+ }   
     
 p {
     margin: .5em 0 .5em 0;
+    
+   
+    
 }
 header{
     display: block;
@@ -30,18 +35,14 @@ header{
 }
 h1 {
 
-        font-size: 0% 5em; 
+        font-size:4em; 
         margin-top: .5em;   
         text-shadow: 1px 2px 2px  rgb(173, 56, 56);
               }  
-              h2{
-                display: block;
-    font-size: 1.2em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+h2 {
+               
+    font-size: 2em;
+    
               }
 .banner {
              max-width: 10
@@ -49,7 +50,7 @@ h1 {
 }
 
 .sub-title {
-    width: 675px;
+    width: 75%;
     background-color: rgb(173, 56, 56);
     font-size: 1.5em;
     padding: 50px;
@@ -57,6 +58,9 @@ h1 {
     border-width: 1px 4px 12px;
     margin-left: auto;
     margin-right: auto;
+    
+  
+  
 }
     
   
@@ -118,11 +122,7 @@ animation: 3s spin 1s infinite;
     5px 5px 5px black,
     5px 5px 5px black;
     margin: 10px;}
-    .banner{
-      background-image:url(images/derbywinner.jpg), url(images/farmtrack.jpg);
-background-position: top left, center right;
-background-repeat: no-repeat, no-repeat;}
-    
+   
    
     
 
@@ -172,11 +172,14 @@ background-repeat: no-repeat, no-repeat;}
      
      
      article {
+       
         text-align: center;
         width: 75%;
      }
      .columns{
         display: flex;
+
+        
 
      }
      @media only screen and (min-width:768px) {
@@ -186,6 +189,7 @@ background-repeat: no-repeat, no-repeat;}
                 }
     /*this is to hide my logo and images when in mobile*/
     @media (max-width:768px) {
+  
          .logoimage ,.hideclass { 
             display: none;  }         
        
@@ -205,7 +209,7 @@ background-color: rgb(201, 81, 81) ;
 border: solid 1px brgh(204, 204,204);
 box-shadow: 5px 5px 5px;
 transition-duration: 0.75s;
-    height: 75px;}
+    }
 
              
         
