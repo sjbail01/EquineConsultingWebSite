@@ -35,9 +35,10 @@ header{
 }
 h1 {
 
-        font-size:4em; 
+        font-size:3em; 
         margin-top: .5em;   
         text-shadow: 1px 2px 2px  rgb(173, 56, 56);
+        text-align: center;
               }  
 h2 {
                
@@ -50,24 +51,17 @@ h2 {
 }
 
 .sub-title {
-    width: 75%;
+    width: 80%;
     background-color: rgb(173, 56, 56);
     font-size: 1.5em;
-    padding: 50px;
+    padding: 30px;
     border: 50px black;
     border-width: 1px 4px 12px;
-    margin-left: auto;
     margin-right: auto;
-    
-  
-  
-}
-    
+}          
   
 
-.tbcontainer{
-    text-align: -webkit-center;
-}
+
 
 .tbprice  th{
   color: #fff;
@@ -174,8 +168,7 @@ animation: 3s spin 1s infinite;
      
      article {
        
-        text-align: center;
-        width: 75%;
+        width: 90%;
      }
      .columns{
         display: flex;
