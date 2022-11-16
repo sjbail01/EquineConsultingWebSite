@@ -58,6 +58,7 @@ h2 {
     border: 50px black;
     border-width: 1px 4px 12px;
     margin-right: auto;
+    display: inline-block;
 }          
   
 
