@@ -182,9 +182,11 @@ animation: 3s spin 1s infinite;
             display: flex;
                     }
                 }
-    /*this is to hide my logo and images when in mobile*/
+
+                
+    /*this is to hide my logo and images */
     @media (max-width:768px) {
-  
+
          .logoimage ,.hideclass { 
             display: none;  }         
        
@@ -195,7 +197,14 @@ animation: 3s spin 1s infinite;
         display: flex;
     }
     }
-  
+    @media (min-width:1200px) {
+
+        .sub-title{
+         padding:28px;
+     
+        }
+        
+        }
     .obox {
  width: 200px;
  padding: 10px;
