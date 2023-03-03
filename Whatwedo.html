@@ -42,11 +42,14 @@
             </article>
             </section>
             <div class="tbcontainer">
-                <table class="tbprice">
+            <table id="tbprice" class="tbprice">       
+
+            </table>
+<!--
+ <table class="tbprice">
                     <tr>
-                        <th class="titleBilling1 titleBilling2 titleBilling3" colspan="3">Billing Package</th>
-                
-                      </tr>
+                        <th class="titleBilling1 titleBilling2 titleBilling3" colspan="3">In Training Package</th>
+                                           </tr>
                       <tr>
                         <td class="descBilling1">1-3 horses</td>
                         <td class="descBilling2">4-6 horses </td>
@@ -102,7 +105,14 @@
                         <td><button  data-order="TrackVisit3">Order 7-10 Horses</button></td>
                       </tr>
                 </table>
-              </div>
+
+-->
+
+
+
+            </div>
+           
+          </div>
             
     
     </article>
@@ -122,11 +132,100 @@
   </footer>
 </body>
 <script>
+
+var myArray = [
+{"product":"Invoice Evaluation Package",items:
+[  
+{
+id:1,
+                "numberOfHorses": "1-3 horses",
+                "price": "$60.00 Per month"
+            },
+            {
+              id:2,
+                "numberOfHorses": "4-6 horses",
+                "price": "$90.00 Per month"
+            },
+            {
+              id:3,
+                "numberOfHorses": "7-10 horses",
+                "price": "$120.00 Per month"
+            },
+          
+          ]
+},
+{"product":"Farm Visit Package",items:
+[  
+{
+  id:4,
+                "numberOfHorses": "1-3 horses",
+                "price": "$160.00 Per visit"
+            },
+            {
+              id:5,
+                "numberOfHorses": "4-6 horses",
+                "price": "$200.00 Per visit"
+            },
+            {
+              id:6,
+                "numberOfHorses": "7-10 horses",
+                "price": "$280.00 Per visit"
+            },
+          
+          ]
+},
+{"product":"In Training Package",items:
+[  
+{
+  id:7,
+                "numberOfHorses": "1-3 horses",
+                "price": "$80.00 Per visit"
+            },
+            {
+              id:8,
+                "numberOfHorses": "4-6 horses",
+                "price": "$110.00 Per visit"
+            },
+            {
+              id:9,
+                "numberOfHorses": "7-10 horses",
+                "price": "$180.00 Per visit"
+            },
+          
+          ]
+}
+];
+        buildTable(myArray);
+
+        function buildTable(dataTraining) {
+            var tbprice = document.getElementById("tbprice");
+            debugger;
+            for (let i = 0; i < dataTraining.length; i++) {
+              debugger;
+              let row = `      <tr>
+                <th class="titleBilling1 " colspan="3">${dataTraining[i].product}</th>
+
+              </tr>`
+                tbprice.innerHTML += row
+            for (let j = 0; j < dataTraining[i].items.length; j++) {
+              debugger;
+                 row = `<tr>
+                            <td>${dataTraining[i].items[j].numberOfHorses}</td>
+                            <td>${dataTraining[i].items[j].price}</td>
+                            <td><button data-myItemsId="${dataTraining[i].items[j].id}"  data-order="${dataTraining[i].product}">Order ${dataTraining[i].items[j].numberOfHorses}</button></td>
+                            </tr>`
+                tbprice.innerHTML += row
+            }
+          }
+        }
+
+
+
     window.addEventListener("DOMContentLoaded", function(e) {
         const orderButtons= document.querySelectorAll("button[data-order]");
         
         orderButtons.forEach(function(button) { 
-
+ 
         button.addEventListener("click", function(e) { 
             debugger;
             const button = e.currentTarget;
@@ -136,16 +235,18 @@
  let logoimage=  document.getElementsByClassName('logoimage')[0];
   logoimage.classList.add("load");
 
-
-let myval=e.currentTarget.attributes['data-order'].value;
-
-
+debugger;
+let myproducts=e.currentTarget.attributes['data-order'].value;
+let myItemsId=e.currentTarget.attributes['data-myItemsId'].value;
+let products=myArray.filter(o=>o.product===myproducts);
+let items=products[0].items.filter(o=>o.id==myItemsId);
+debugger;
 
            const order ={
-                id: button.getAttribute("data-order"),
-                title: document.getElementsByClassName("title"+myval)[0].innerText,
-                price: document.getElementsByClassName("price"+myval)[0].innerText,
-                desc: document.getElementsByClassName("desc"+myval)[0].innerText
+                id: myItemsId,
+                title: myproducts,
+                price: items[0].price,
+                desc:items[0].numberOfHorses
             };
             localStorage.setItem("order", JSON.stringify (order));
 
