@@ -104,10 +104,21 @@
                 <div><label for= "email"> Email</label></div>
                 <div><input type="text" name="email" id="email" /></div>
             </div>
+            <div class="input-group">
+                <div><label for= "street"> Street</label></div>
+                <div><input type="text" name="street" id="street" /></div>  
+            </div>
+            
+            
+            
+            <div class="input-group">
+                <div><label for= "postal-code"> Zip Code</label></div>
+                <div><input type="text" name="postal-code" id="postal-code" /></div>  
+            </div>
 
             <div class="input-group">
-                <div><label for= "address"> Address</label></div>
-                <div><input type="text" name="address" id="address" /></div>
+                <div><label for= "city"> City</label></div>
+                <div><input type="text" name="city" id="city" /></div>
             </div>
 
             <div class="input-group">
@@ -169,10 +180,7 @@
                     </select>
                 </div>
             </div>
-            <div class="input-group">
-                <div><label for= "postal-code"> Postal code</label></div>
-                <div><input type="text" name="postal-code" id="postal-code" /></div>  
-            </div>
+           
 
             <div class="input-group">
                 <div><label for ="Comments">Comments</label></div>
@@ -244,11 +252,49 @@
     
     }
 });
+//*********API*******
+document.getElementById("postal-code").onchange = function() {myFunction()};
+
+function myFunction() {
+  let postalCode = document.getElementById("postal-code").value;
+
+  
+    const req=new XMLHttpRequest();
+req.open('Get','https://api.zippopotam.us/us/'+ postalCode);
+req.onload=function(){
+  
+  if(req.status===200)
+  {
+    const data=JSON.parse(
+      req.response
+    );
+
+    document.getElementById("city").value=data.places[0]['place name'];
+
+ 
+let state = document.getElementById('state');
+for (let i = 0; i < state.options.length; i++) {
+    if (state.options[i].text === data.places[0].state) {
+    
+        state.selectedIndex = i;
+        break;
+    }
+}
+  }
+
+}
+req.send();
+
+  
+}
+debugger;
+
+
 //************Email****************
 
 
 document.getElementById("email").onmouseleave = function(v) {
-    debugger;
+    
    
     ValidateEmail(this.value);
 };

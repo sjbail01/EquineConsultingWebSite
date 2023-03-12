@@ -133,6 +133,7 @@
 </body>
 <script>
 
+
 var myArray = [
 {"product":"Invoice Evaluation Package",items:
 [  
@@ -199,16 +200,16 @@ id:1,
 
         function buildTable(dataTraining) {
             var tbprice = document.getElementById("tbprice");
-            debugger;
+            
             for (let i = 0; i < dataTraining.length; i++) {
-              debugger;
+              
               let row = `      <tr>
                 <th class="titleBilling1 " colspan="3">${dataTraining[i].product}</th>
 
               </tr>`
                 tbprice.innerHTML += row
             for (let j = 0; j < dataTraining[i].items.length; j++) {
-              debugger;
+              
                  row = `<tr>
                             <td>${dataTraining[i].items[j].numberOfHorses}</td>
                             <td>${dataTraining[i].items[j].price}</td>
@@ -227,7 +228,7 @@ id:1,
         orderButtons.forEach(function(button) { 
  
         button.addEventListener("click", function(e) { 
-            debugger;
+            
             const button = e.currentTarget;
                         const container = button.parentNode;
                       
@@ -235,12 +236,12 @@ id:1,
  let logoimage=  document.getElementsByClassName('logoimage')[0];
   logoimage.classList.add("load");
 
-debugger;
+
 let myproducts=e.currentTarget.attributes['data-order'].value;
 let myItemsId=e.currentTarget.attributes['data-myItemsId'].value;
 let products=myArray.filter(o=>o.product===myproducts);
 let items=products[0].items.filter(o=>o.id==myItemsId);
-debugger;
+
 
            const order ={
                 id: myItemsId,
@@ -257,6 +258,11 @@ debugger;
     });
 });
 });
+
+
+
+
+
     </script>
 
 </html>
