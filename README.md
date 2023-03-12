@@ -12,4 +12,9 @@ I chose
 5)Transition on an element: on menu buttons have hover color change
 6)Responsive menu using CSS.
 7)Responsive menu using Java Script.
-
+Web Deb 2....
+Part 2 stay tuned. 
+1) I have created an array to display product information in a table. This can be found on the "What we do" page. This fills requirement for #1 in section 1.
+2) I added a email validation to my Order page, which can be found on "what we do page" and hitting white order button, which takes you to a form where the email validation can be found. This fills #3 on section #1 requirement.
+3) Section 1 last requirement. I added a countdown feature. How many days to the KY Derby! this can be found on home page in Nav bar.
+4) Section 2 #1 I added into my order form, which can be found when hitting order button on "What we do" page, a self filling city and state, when you add in a zip code (currently just US).
