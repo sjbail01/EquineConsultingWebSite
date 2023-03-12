@@ -13,10 +13,19 @@ body {
    
     
 }
+/* a is any link you are styling*/
  a {
     color: #fff;
  }   
-    
+    .countdown {
+        color: #fff;   
+        align-items: center;
+        margin-left: 189px;
+    }
+    .countdown p{
+        margin-left: 10px;
+        display:inline;
+    }
 p {
     margin: .5em 0 .5em 0;
     
@@ -25,7 +34,7 @@ p {
 }
 header{
     display: block;
-    position: fixed;    
+    position: fixed;     
     top:0;
     left: 0;
     width: 100%;

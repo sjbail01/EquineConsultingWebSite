@@ -280,6 +280,11 @@ for (let i = 0; i < state.options.length; i++) {
         break;
     }
 }
+  }else{
+    alert("invalid entry please try again");
+    document.getElementById("postal-code").value="";
+    document.getElementById("city").value="";
+  document.getElementById('state').selectedIndex=0;
   }
 
 }
@@ -293,10 +298,13 @@ debugger;
 //************Email****************
 
 
-document.getElementById("email").onmouseleave = function(v) {
-    
+document.getElementById("email").onchange = function(v) {
+    if(!ValidateEmail(this.value))
+    {
+        this.value=""; 
+    }  
    
-    ValidateEmail(this.value);
+    
 };
 
 function ValidateEmail(mail) 
