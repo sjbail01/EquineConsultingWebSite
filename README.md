@@ -4,6 +4,7 @@ I have included in my project/website some simple HTML mark-up, main.css file an
 My early version of this website will not include a Jason/node package to run, but later updates will. Stay tuned.
 The idea behind the website was to offer my skills as a consultant to investors that do not have specialized knowledge in the Thoroughbred Equine industry and at the same time complete my Code Louisville project requirements.
 We were required to incluse some CSS, Java Script and HTML markup in our project aswell as pick 3 additional features. 
+ Iam using nmp version 18.19.3.
 I chose 
 1) Custom trasition animation- my logo scrolls across the page when hitting order button under "What we do" page.
 2(Hide\show feature: I have hidden my images when in responsive layout. 
